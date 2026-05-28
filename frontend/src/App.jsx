@@ -1,8 +1,41 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom"
+
+import Home from "./pages/Home"
+
+import UploadPage from "./pages/UploadPage"
+
+import CameraPage from "./pages/CameraPage"
+
 function App() {
+
   return (
-    <div className="text-5xl text-center mt-20 font-bold">
-      VisionAid
-    </div>
+
+    <BrowserRouter>
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/upload"
+          element={<UploadPage />}
+        />
+
+        <Route
+          path="/camera"
+          element={<CameraPage />}
+        />
+
+      </Routes>
+
+    </BrowserRouter>
   )
 }
 
